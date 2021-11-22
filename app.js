@@ -34,7 +34,12 @@ app.use('/resources', express.static(__dirname + '/public'));
 
 //9- Estableciendo las rutas
 app.get('/', (req, res)=>{
-    res.render('index.ejs');
+    res.render('index.ejs', {msg: 'ESTO ES UN MENSAJE DESDE NODE'});
+})
+
+//9- Estableciendo las rutas
+app.get('/login', (req, res)=>{
+    res.render('login.ejs');
 })
 
 app.listen(3000, (req, res)=>{
