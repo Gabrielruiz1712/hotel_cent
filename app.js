@@ -28,7 +28,6 @@ app.use('/resources', express.static(__dirname + '/public'));
     //saveUninitialized:TextTrackCue
 //}));
 
-
 //8- Invocamos al modulo de la conexion de la BD
 //const connection = require('./database/db');
 
@@ -37,9 +36,14 @@ app.get('/', (req, res)=>{
     res.render('index.ejs', {msg: 'ESTO ES UN MENSAJE DESDE NODE'});
 })
 
-//9- Estableciendo las rutas
+//10- Ruta Login
 app.get('/login', (req, res)=>{
     res.render('login.ejs');
+})
+
+//11- Ruta Login
+app.get('/inicio', (req, res)=>{
+    res.render('inicio.ejs');
 })
 
 app.listen(3000, (req, res)=>{
