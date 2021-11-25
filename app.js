@@ -46,6 +46,11 @@ app.get('/inicio', (req, res)=>{
     res.render('inicio.ejs');
 })
 
+//12- Ruta Registro de nuevo usuario
+app.get('/register', (req, res)=>{
+    res.render('register.ejs');
+})
+
 app.listen(3000, (req, res)=>{
     console.log('SERVER RUNNING IN http://localhost:3000');
 })

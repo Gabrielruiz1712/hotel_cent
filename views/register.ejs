@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <title>Usuarios</title>
+</head>
+
+<body>
+    <div class="inicio-forma">
+        <img src="resources/css/Imagenes/Logocentral.png" alt="Logo">
+    </div>
+    <div class="titulo1">
+        <h1>Registro de usuarios</h1>
+    </div>
+    <div class="login-formb">
+        <div class="register-form">
+            <form action="register" method="post">
+
+                <label for="rol">Tipo</label>
+                <select type="rol" id="rol" class="select-css">
+                    <option value="admin" selected>Administrador</option>
+                    <option value="llaves" selected>Ama de llaves</option>
+                    <option value="Geren" selected>Gerente</option>
+                    <option value="user" selected>Usuario</option>
+                </select>
+                <br>
+
+                <label for="user">Nombre(s)</label>
+                <input type="text" name="user" required>
+
+                <label for="name">Apellido</label>
+                <input type="text" name="name" required>
+
+                <label for="email">Correo Electronico</label>
+                <input type="text" name="email" required>
+
+                <br>
+                <label for="pass">Contraseña</label>
+                <input type="password" name="pass" required tabindex="4">
+
+                <div style="display: inline;">
+                    <a href="/" class="btn-cancel">Cancelar</a><input type="submit" class="btn-save" value="Guardar">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+
+</html>
