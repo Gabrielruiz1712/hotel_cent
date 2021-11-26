@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-fondo">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-fondo">
         <img height="80px" width="250px"  src="resources/css/Imagenes/Logocentral.png" alt="Logo">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -26,29 +27,31 @@
                     <a class="nav-link" href="#">Agenda <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nueva Reservación</a>
+                    <a class="nav-link" href="reservacion">Nueva Reservación</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Registrar</a>
+                    <a class="nav-link" href="registrar">Registrar</a>
                 </li>
+                
             </ul>
-                
+            <div class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-primary" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Habitaciones e historial
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Ocupacion de Habitaciones</a>
+                    <a class="dropdown-item" href="#">Limpieza</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Historial de Cliente</a>
+                </div>
+            </div>
                 <!-- <a class="nav-link" href="register">Usuarios</a> -->
-                <a class="btn btn-outline-primary" href="register">Usuarios</a>
+                <a class="btn btn-outline-primary margen" href="register">Usuarios</a>
                 
                 
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li> -->
+                
+                
 
                 <!-- <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -60,6 +63,45 @@
             </form> -->
         </div>
     </nav>
+
+    <div class = "login-formb">
+        <div class = "login-form">
+            <h2>Agenda</h2>
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Reservación de.." aria-label="Search">
+                <a class="btn btn-primary">Buscar</a>
+            </form>
+            <div class = "fon-busc-res"></div> -->
+            <div class="form-group pull-right">
+                <input type="text" class="search form-control" placeholder="Reservacion a nombre de..">
+        </div>
+            <span class="counter pull-right"></span>
+            <table class="table table-hover table-bordered results">
+              <thead>
+                <tr>
+                  <th class="perro" class="col-md-5 col-xs-5">Name</th>
+                <tr class="warning no-result">
+                  <td colspan="4"><i class="fa fa-warning"></i> No result</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="perro">
+                  <td>Vatanay Özbeyli</td>
+                </tr>
+                <tr class="perro">
+                  <td>Burak Özkan</td>
+                </tr>
+                <tr class="perro">
+                  <td>Egemen Özbeyli</td>
+                </tr>
+                <tr class="perro">
+                  <td>Engin Kızıl</td>
+                </tr>
+              </tbody>
+            </table>
+            <a class="btn btn-primary"href="#">Asignar Cuarto</a>
+        </div>
+    </div>
     <!-- <div class="inicio-forma">
         <img src="resources/css/Imagenes/Logocentral.png" alt="Logo">
         <a href="agenda" class="btn-agenda">Agenda</a>

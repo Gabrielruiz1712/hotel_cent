@@ -62,6 +62,24 @@ body{
     background-color: #b5cbe2;
     
 }
+
+.perro{
+  background-color: #fff
+}
+
+.results tr[visible='false'],
+.no-result{
+  display:none;
+}
+
+.results tr[visible='true']{
+  display:table-row;
+}
+
+.counter{
+  padding:8px; 
+  color:#fff;
+}
 /* .login-forma img{
     width: 250px;
 } */
@@ -75,10 +93,29 @@ body{
     background-color: #b5cbe2;
     
 }
+.fon-busc-res{
+  width: 300px;
+    margin: 0 auto;
+    color: 022D4F;
+    padding: 20px 20px 60px 20px;
+    margin-top: 70px;
+    font-family: roboto;
+    border-radius: 5px;
+    background-color: #ffff;
+}
+
+.margen{
+  margin-left: 1%;
+  margin-right: 1%;
+}
 
 .navbar{
     padding: 20px 0px 60px 0px;
     height: 100px;
+}
+
+.login-form h2{
+  text-align: center;
 }
 
 /* .inicio-forma-img{
