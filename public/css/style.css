@@ -62,23 +62,29 @@ body{
     background-color: #b5cbe2;
     
 }
-.login-forma img{
+/* .login-forma img{
     width: 250px;
-}
-.inicio-forma{
-    width: 100%;
+} */
+.bg-fondo{
+    /* width: 100%;
     height: 30px;
     color: rgb(255, 255, 255);
     padding: 20px 0px 60px 0px;
     margin-top: 0px;
-    font-family: roboto;
+    font-family: roboto; */
     background-color: #b5cbe2;
     
 }
-.inicio-forma img{
-    width: 250px;
-    margin-right: 1000px;
+
+.navbar{
+    padding: 20px 0px 60px 0px;
+    height: 100px;
 }
+
+/* .inicio-forma-img{
+    width: 250px;
+    margin-right: 1000px; 
+}*/
 
 /* Boton usuario en inicio*/
 .inicio-forma a[href="register"]{
