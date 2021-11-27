@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nueva Reservacion</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-fondo">
+<body background="resources/css/Imagenes/Fondo.png">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <img height="80px" width="250px" src="resources/css/Imagenes/Logocentral.png" alt="Logo">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -22,30 +22,18 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="inicio">Agenda <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active disabled">
-                    <a class="nav-link" href="reservacion">Nueva Reservación</a>
+                <li class="nav-item active">
+                    <a class="nav-link active disable">Reservación <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="registrar">Registrar</a>
+                    <a class="nav-link" href="#">Galeria</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+
             </ul>
-            <div class="nav-item dropdown">
-                <a class="dropdown-toggle btn btn-primary" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Habitaciones e historial
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="habitaciones">Ocupacion de Habitaciones</a>
-                    <a class="dropdown-item" href="limpieza">Limpieza</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="historial">Historial de Cliente</a>
-                </div>
-            </div>
-            <a class="btn btn-outline-primary margen" href="register">Usuarios</a>
-            <a class="btn outline" href="clinicio">Cerras Sesion</a>
+            <a class="btn outline-primary margen" href="login">Iniciar Sesion</a>
         </div>
     </nav>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -58,4 +46,5 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
