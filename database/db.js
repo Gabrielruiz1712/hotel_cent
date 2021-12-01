@@ -1,4 +1,4 @@
-/*const mysql = require('mysql');
+const mysql = require('mysql');
 const connection = mysql.createConnection({
     host : process.env.DB_HOST,
     user: process.env.DB_USER,
@@ -13,4 +13,4 @@ connection.connect((error)=>{
     }
     console.log('¡Conectado a la base de datos!');
 });
-module.exports = connection;*/
+module.exports = connection;
