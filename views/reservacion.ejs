@@ -47,6 +47,65 @@
             <a class="btn btn-outline-primary margen" href="register">Usuarios</a>
             <a class="btn outline" href="clinicio">Cerras Sesion</a>
         </div>
+
+        <div class="titulo1">
+            <h1>Reservación</h1>
+        </div>
+        <div class="login-formb">
+            <div class="reservation-form">
+                <form action="reservation" method="post">
+    
+                    <label for="Nombre">Nombre(s)</label>
+                    <input type="text" name="Nombre" required>
+    
+                    <label for="name">Apellidos</label>
+                    <input type="text" name="name" required>
+
+                    <div style="display: inline;">
+                        <a href="/" class="titulo2">Entrada</a><a href="/" class="titulo2">Salida</a>
+                    </div>
+    
+                    <div style="display: inline;">
+                        <input type="date" id="start" name=trip-start><input type="date" id="finish" name=trip-finish>
+                    </div>
+
+                    <label for="adulto">Adultos</label>
+                    <select type="rol" id="rol" class="select-css">
+                        <option value="1" selected>1 Adulto</option>
+                        <option value="2" selected>2 Adultos</option>
+                        <option value="3" selected>3 Adultos</option>
+                        <option value="4" selected>4 Adultos</option>
+                        <option value="5" selected>5 Adultos</option>
+                    </select>
+                    <br>
+
+                    <label for="nino">Niños</label>
+                    <select type="rol" id="rol" class="select-css">
+                        <option value="1" selected>1 Niño</option>
+                        <option value="2" selected>2 Niños</option>
+                        <option value="3" selected>3 Niños</option>
+                        <option value="4" selected>4 Niños</option>
+                        <option value="5" selected>5 Niños</option>
+                    </select>
+                    <br>
+
+                    <label for="habitaciones">Habitaciones</label>
+                    <select type="rol" id="rol" class="select-css">
+                        <option value="1" selected>1 Habitación</option>
+                        <option value="2" selected>2 Habitaciones</option>
+                        <option value="3" selected>3 Habitaciones</option>
+                        <option value="4" selected>4 Habitaciones</option>
+                        <option value="5" selected>5 Habitaciones</option>
+                    </select>
+                    <br>
+    
+                    <div style="display: inline;">
+                        <a href="/" class="btn-save">Reservar</a><a href="/" class="btn-save">Asignar habitación</a>
+                    </div>
+                </form>
+            </div>
+
+
     </nav>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
