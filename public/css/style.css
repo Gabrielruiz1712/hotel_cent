@@ -3,10 +3,8 @@ body{
   font-family: roboto;
   margin: auto;
   text-align: center;
+    /* background-repeat: no-repeat; */
 }
-/* .fondo{
-  background-image: url(resources/css/Imagenes/Fondo.png);
-} */
 
 .centrar{
   margin: auto;
@@ -71,6 +69,47 @@ body{
   
 }
 
+.cl-reserva{
+  width: 400px;
+  margin: 0 auto;
+  color: rgb(255, 255, 255);
+  padding: 20px 20px 60px 20px;
+  margin-top: 70px;
+  margin-right: 10%;
+  font-family: roboto;
+  /* box-shadow: 0 19px 38px grey; */
+  border-radius: 5px;
+  background-color:rgba(255, 255, 255, 0.50);
+}
+
+.cl-reserva-confi{
+  width: 400px;
+  margin-left: 65%;
+  color: rgb(255, 255, 255);
+  padding: 20px 20px 60px 20px;
+  margin-top: 70px;
+  font-family: roboto;
+  border-radius: 5px;
+  background-color:#a8a8a8;
+}
+.fuente{
+  font-family: roboto;
+}
+
+.cl-reserva-confi2{
+  width: 800px;
+  margin-left: 5%;
+  color: rgb(255, 255, 255);
+  padding: 20px 20px 20px 20px;
+  margin-top: 70px;
+  font-family: roboto;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.linea{
+border: #022D4F;
+
+}
 .perro{
   background-color: #fff
 }
@@ -99,9 +138,16 @@ body{
   color:#fff;
 }
 
+.bg-fondo-inicio{
+  background-color: rgba(255, 255, 255, 0.50);
+}
 .bg-fondo{
   background-color: #b5cbe2;
 }
+.bg-fondo-conf{
+  background-color: #fff;
+}
+
 
 /* .bg-fondo-cl{
 opacity: 50%;
@@ -220,6 +266,34 @@ border-color: #022D4F;
 box-shadow:0 0 0 3 ;
 }
 
+  .btn-save-conf{
+    width: 50%;
+    padding: 15px;
+    background-color: #30ACF2;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:medium;
+    color: #ffffff;
+    margin-top: 20px;
+    border-radius: 5px;
+    /* Para dar la apariencia de un boton */
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;  
+  }
+  
+  .btn-save-conf:hover,.btn-save:active{
+    color: #fff;
+    background-color: #022D4F;
+    border-color: #022D4F;
+    }
+  
+  .btn-save-conf:focus{
+    box-shadow:0 0 0 3 ;
+    }
 /* Estilos para el select dropdown */
 .select-css {
 display: block;
@@ -233,6 +307,22 @@ box-sizing: border-box;
 margin: 0;  
 background-color: #f5f5f5;
 border-radius: 5px;
+}
+.lado{
+  margin-left:22%;
+}
+.select2-css {
+  display: block;
+  font-size: 16px;  
+  font-weight: 400;  
+  line-height: 1.3;
+  padding: .4em 1.4em .3em .8em;
+  width: 400px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;   
+  background-color: #f5f5f5;
+  border-radius: 5px;
 }
 
 .select-css::-ms-expand {
@@ -281,6 +371,29 @@ color:#fff;
 background-color: #6B7280;
 border-color:#6B7280;
 }
+
 ancel:focus{
 box-shadow:0 0 0 3px #6B7280;
+  box-shadow:0 0 0 3px #6B7280;
+}
+    
+label {
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+  margin: .4rem 0;
+  border-radius: 5px;
+}
+
+.color2{
+  color:#022D4F;
+  font-weight: bold;
+  font-size:medium;
+}
+
+.color{
+  color:#022D4F;
 }

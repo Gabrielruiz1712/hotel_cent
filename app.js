@@ -154,9 +154,64 @@ app.get('/', (req, res) => {
 		}
 	});
 
-	app.listen(3000, (req, res) => {
-		console.log('SERVER RUNNING IN http://localhost:3000');
-	})
+app.get('/', (req, res)=>{
+    res.render('clinicio.ejs', {msg: 'ESTO ES UN MENSAJE DESDE NODE'});
+})
+
+//10- Ruta Login
+app.get('/login', (req, res)=>{
+    res.render('login.ejs');
+})
+
+//11- Ruta Login
+app.get('/inicio', (req, res)=>{
+    res.render('inicio.ejs');
+})
+
+//12- Ruta Registro de nuevo usuario
+app.get('/register', (req, res)=>{
+    res.render('register.ejs');
+})
+
+//13- Ruta reservaciones
+app.get('/reservacion', (req, res)=>{
+    res.render('reservacion.ejs');
+})
+
+//13- Ruta reservaciones
+app.get('/registrar', (req, res)=>{
+    res.render('registrar.ejs');
+})
+
+//14- Ruta habitaciones
+app.get('/habitaciones', (req, res)=>{
+    res.render('habitaciones.ejs');
+})
+
+//15- Ruta limpieza
+app.get('/limpieza', (req, res)=>{
+    res.render('limpieza.ejs');
+})
+
+//16- Ruta historial
+app.get('/historial', (req, res)=>{
+    res.render('historial.ejs');
+})
+
+//17- Ruta inicio de cliente
+app.get('/clinicio', (req, res)=>{
+    res.render('clinicio.ejs');
+})
+
+//18- Ruta inicio de confirmación
+app.get('/clconfir', (req, res)=>{
+    res.render('clconfir.ejs');
+})
+
+
+app.listen(3000, (req, res)=>{
+    console.log('SERVER RUNNING IN http://localhost:3000');
+})
 
 
 
