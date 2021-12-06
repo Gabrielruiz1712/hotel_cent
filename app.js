@@ -92,14 +92,16 @@ app.get('/', (req, res) => {
 	app.post('/register', async (req, res) => {
 		const Nombre = req.body.Nombre;
 		const name = req.body.name;
-		const Tipo = req.body.Tipo;
+		const Tipo = req.body.rol;
 		const email = req.body.email;
-		const Contraseña = req.body.contraseña;
-		connection.query('INSERT INTO usuario SET ?', { Tipo: Tipo, Nombre: Nombre, Apellido: name, email: email, Contraseña: Contraseña }, async (error, results) => {
+		const Con = req.body.Con;
+		//console.log(Tipo)
+		connection.query('INSERT INTO usuario SET ?', { Tipo: Tipo, Nombre: Nombre, Apellido: name, email: email, Contraseña: Con }, async (error, results) => {
 			if (error) {
 				console.log(error);
-			} else {
-				res.render('register', {
+				res.end();
+			} else { 
+				res.render('login', {
 					alert: true,
 					alertTitle: "Registration",
 					alertMessage: "¡Successful Registration!",
@@ -111,47 +113,39 @@ app.get('/', (req, res) => {
 				res.redirect('/');
 			}
 		});
+
 	})
 
 	//11 - Metodo para la autenticacion
 	app.post('/auth', async (req, res) => {
 		const email = req.body.email;
-		const Contraseña = req.body.Contraseña;
-		if (email && Contraseña) {
-			connection.query('SELECT * FROM usuarios WHERE user = ?', [email], async (error, results, fields) => {
-				if (results.length == 0 || !(await bcrypt.compare(Contraseña, results[0].Contraseña))) {
-					res.render('login', {
-						alert: true,
-						alertTitle: "Error",
-						alertMessage: "USUARIO y/o PASSWORD incorrectas",
-						alertIcon: 'error',
-						showConfirmButton: true,
-						timer: false,
-						ruta: 'login'
-					});
-
-					//Mensaje simple y poco vistoso
-					res.send('Incorrect Username and/or Password!');				
-				} else {
-					//creamos una var de session y le asignamos true si INICIO SESSION       
-					req.session.loggedin = true;
-					req.session.name = results[0].name;
-					res.render('login', {
-						alert: true,
-						alertTitle: "Conexión exitosa",
-						alertMessage: "¡LOGIN CORRECTO!",
-						alertIcon: 'success',
-						showConfirmButton: false,
-						timer: 1500,
-						ruta: 'inicio'
-					});
-				}
-				res.end();
-			});
-		} else {
-			res.send('Please enter user and Password!');
-			res.end();
+		const Contraseña = req.body.Contraseña; 
+		connection.query('SELECT * FROM usuario WHERE Email = ?', [email], async (error, results, fields) => {
+		
+		if (results.length == 1 && Contraseña == results[0].Contraseña){
+			console.log('login entro')
+			res.render('inicio', {
+								alert: true,
+								alertTitle: "Conexión exitosa",
+								alertMessage: "¡LOGIN CORRECTO!",
+								alertIcon: 'success',
+								showConfirmButton: false,
+								timer: 1500,
+								ruta: 'inicio'
+							});
+		}else{
+			console.log('login no ')
+			res.render('login', {
+								alert: true,
+								alertTitle: "Error",
+								alertMessage: "USUARIO y/o PASSWORD incorrectas",
+								alertIcon: 'error',
+								showConfirmButton: true,
+								timer: false,
+								ruta: 'login'
+							});
 		}
+		});
 	});
 
 app.get('/', (req, res)=>{

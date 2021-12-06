@@ -58,11 +58,11 @@
             <form action="register" method="post">
 
                 <label for="Tipo">Tipo</label>
-                <select type="rol" id="rol" class="select-css">
-                    <option value="admin" selected>Administrador</option>
-                    <option value="llaves" selected>Ama de llaves</option>
-                    <option value="Geren" selected>Gerente</option>
-                    <option value="user" selected>Usuario</option>
+                <select type="rol" id="rol" class="select-css" name="rol">
+                    <option value="Administrador" selected>Administrador</option>
+                    <option value="Ama de llaves" selected>Ama de llaves</option>
+                    <option value="Gerente" selected>Gerente</option>
+                    <option value="Usuario" selected>Usuario</option>
                 </select>
                 <br>
 
@@ -75,9 +75,8 @@
                 <label for="email">Correo Electronico</label>
                 <input type="text" name="email" required>
 
-                <br>
-                <label for="Contraseña">Contraseña</label>
-                <input type="password" name="Contraseña" required tabindex="4">
+                <label for="name">Contraseña</label>
+                <input type="password" name="Con" required>
 
                 <div style="display: inline;">
                     <a href="/" class="btn-cancel">Cancelar</a><input type="submit" class="btn-save" value="Guardar">
