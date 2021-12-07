@@ -388,6 +388,33 @@ background-color: #6B7280;
 border-color:#6B7280;
 }
 
+/* Estilos boton eliminar*/
+.btn-eliminar{
+  width: 50%;
+  padding: 15px;
+  background-color: #9c251c;
+  border: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: bold;
+  font-size:medium;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 5px;
+  /* Para dar la apariencia de un boton */
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;  
+  }
+  
+  .btn-eliminar:hover,.btn-eliminar:active{
+  color:#fff;
+  background-color: #6b3535;
+  border-color:#962121;
+  }
+
 ancel:focus{
 box-shadow:0 0 0 3px #6B7280;
   box-shadow:0 0 0 3px #6B7280;
@@ -412,4 +439,29 @@ label {
 
 .color{
   color:#022D4F;
+}
+
+#footer{
+  border-top: 2px solid #f2f2f2;
+  margin-left: 1%;
+  margin-top: 5em;
+  width: 80%;
+}
+
+#footer a{
+  font-size: 1em;
+}
+
+.footerMenu{
+  float: left;
+  margin: 1em 5em;
+
+}
+
+#footer2{
+  float: right;
+}
+
+#footer3{
+  margin-left: 14%;
 }

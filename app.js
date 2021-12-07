@@ -85,6 +85,11 @@ app.get('/', (req, res) => {
 		res.render('clinicio.ejs');
 	})
 
+	//17- Ruta eliminar usuario
+	app.get('/eliminar', (req, res) => {
+		res.render('eliminar.ejs');
+	})
+
 	app.get('/register', (req, res) => {
 		res.render('register.ejs');
 	})
@@ -92,14 +97,15 @@ app.get('/', (req, res) => {
 	app.post('/register', async (req, res) => {
 		const Nombre = req.body.Nombre;
 		const name = req.body.name;
-		const Tipo = req.body.rol;
+		const Tipo = req.body.tipo;
 		const email = req.body.email;
 		const Con = req.body.Con;
 		//console.log(Tipo)
 		connection.query('INSERT INTO usuario SET ?', { Tipo: Tipo, Nombre: Nombre, Apellido: name, email: email, Contraseña: Con }, async (error, results) => {
 			if (error) {
-				console.log(error);
+				//console.log(error);
 				res.end();
+				res.setHeader('X-Foo', 'bar')
 			} else { 
 				res.render('login', {
 					alert: true,
@@ -115,6 +121,31 @@ app.get('/', (req, res) => {
 		});
 
 	})
+	
+	
+// metodo eliminar usuario
+// app.post('/eliminar', async (req, res) => {
+// 	const idusario = req.body.Con;
+// 	//console.log(Tipo)
+// 	connection.query('DELETE FROM usuario WHERE usuario.idUsuario = ?', [idusuario], async (error, results, fields) => {
+// 		if (error) {
+// 			console.log(error);
+// 			res.end();
+// 		} else { 
+// 			res.render('inicio', {
+// 				alert: true,
+// 				alertTitle: "Registration",
+// 				alertMessage: "¡Successful Elemination!",
+// 				alertIcon: 'success',
+// 				showConfirmButton: false,
+// 				timer: 1500,
+// 				ruta: 'inicio'
+// 			});
+// 			res.redirect('/');
+// 		}
+// 	});
+
+// })
 
 	//11 - Metodo para la autenticacion
 	app.post('/auth', async (req, res) => {
