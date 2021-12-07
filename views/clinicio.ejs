@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body background="resources/css/Imagenes/Fondo.png">
+    <nav class="navbar navbar-expand-lg navbar-light bg-fondo-inicio">
+        <img height="80px" width="250px" src="resources/css/Imagenes/Logocentral.png" alt="Logo">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link active disable">Reservación <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li> -->
+
+            </ul>
+            <a class="btn outline-primary margen" href="login">Iniciar Sesion</a>
+        </div>
+    </nav>
+    <div class="cl-reserva">
+        <div class="register-form">
+            <form action="register" method="post">
+
+                <!-- <label for="rol">Tipo</label>
+                <select type="rol" id="rol" class="select-css">
+                    <option value="admin" selected>Administrador</option>
+                    <option value="llaves" selected>Ama de llaves</option>
+                    <option value="Geren" selected>Gerente</option>
+                    <option value="user" selected>Usuario</option>
+                </select> -->
+                <label for="start" class="color">Entrada:</label>
+                <label for="start" class="lado color">Salida:</label>
+                <br>
+                <input type="date" id="start" name="trip-start" value="2021-12-01" min="2018-01-01" max="2022-12-31">
+                <input type="date" id="start" name="trip-start" value="2021-12-01" min="2018-01-01" max="2022-12-31">
+
+                <br>
+                <br>
+                <select type="rol" id="rol" class="select2-css">
+                    <option value="admin" selected>4 Adultos</option>
+                    <option value="llaves" selected>3 Adultos</option>
+                    <option value="Geren" selected>2 Adultos</option>
+                    <option value="user" selected>1 Adulto</option>
+                </select>
+                <br>
+                <select type="rol" id="rol" class="select2-css">
+                    <option value="admin" selected>3 Menor</option>
+                    <option value="llaves" selected>2 Menor</option>
+                    <option value="Geren" selected>1 Menor</option>
+                    <option value="user" selected>Niños</option>
+                </select>
+                <br>
+                <select type="rol" id="rol" class="select2-css">
+                    <option value="Geren" selected>2 Habitaciones</option>
+                    <option value="user" selected>1 Habitacion</option>
+                </select>
+
+                <!-- <label for="user">Nombre(s)</label>
+                <input type="text" name="user" required>
+
+                <label for="name">Apellido</label>
+                <input type="text" name="name" required>
+
+                <label for="email">Correo Electronico</label>
+                <input type="text" name="email" required>
+
+                <br>
+                <label for="pass">Contraseña</label>
+                <input type="password" name="pass" required tabindex="4"> -->
+
+
+                <a href="clconfir" class="btn-save-conf">Reservar</a>
+                <!-- <input type="submit" class="btn-save-conf" href="clconfir" value="Reservar"> -->
+
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

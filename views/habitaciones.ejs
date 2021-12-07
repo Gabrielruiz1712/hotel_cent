@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocupacion de Habitaciones</title>
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Usuarios</title>
-
 </head>
 
 <body>
@@ -24,7 +23,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="inicio">Agenda <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="inicio">Agenda</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="reservacion">Nueva Reservación</a>
@@ -32,59 +31,27 @@
                 <li class="nav-item">
                     <a class="nav-link" href="registrar">Registrar</a>
                 </li>
+
             </ul>
             <div class="nav-item dropdown">
-                <a class="dropdown-toggle btn btn-primary" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="dropdown-toggle btn btn-primary" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
                     Habitaciones e historial
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="habitaciones">Ocupacion de Habitaciones</a>
+                    <a class="dropdown-item active disable">Ocupacion de Habitaciones</a>
                     <a class="dropdown-item" href="limpieza">Limpieza</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="historial">Historial de Cliente</a>
                 </div>
             </div>
-            <a class="btn btn-outline-primary disabled margen" href="register">Usuarios</a>
+
+            <a class="btn btn-outline-primary margen" href="register">Usuarios</a>
             <a class="btn outline" href="clinicio">Cerras Sesion</a>
 
         </div>
     </nav>
-    <div class="titulo1">
-        <h1>Registro de usuarios</h1>
-    </div>
-    <div class="login-formb">
-        <div class="register-form">
-            <form action="register" method="post">
-
-                <label for="Tipo">Tipo</label>
-                <select type="rol" id="rol" class="select-css" name="rol">
-                    <option value="Administrador" selected>Administrador</option>
-                    <option value="Ama de llaves" selected>Ama de llaves</option>
-                    <option value="Gerente" selected>Gerente</option>
-                    <option value="Usuario" selected>Usuario</option>
-                </select>
-                <br>
-
-                <label for="Nombre">Nombre(s)</label>
-                <input type="text" name="Nombre" required>
-
-                <label for="name">Apellido</label>
-                <input type="text" name="name" required>
-
-                <label for="email">Correo Electronico</label>
-                <input type="text" name="email" required>
-
-                <label for="name">Contraseña</label>
-                <input type="password" name="Con" required>
-
-                <div style="display: inline;">
-                    <a href="/" class="btn-cancel">Cancelar</a><input type="submit" class="btn-save" value="Guardar">
-                </div>
-            </form>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-fondo">
+        <img height="80px" width="250px"  src="resources/css/Imagenes/Logocentral.png" alt="Logo">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Agenda <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reservacion">Nueva Reservación</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registrar">Registrar</a>
+                </li>
+                
+            </ul>
+            <div class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-primary" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Habitaciones e historial
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="habitaciones">Ocupacion de Habitaciones</a>
+                    <a class="dropdown-item" href="limpieza">Limpieza</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="historial">Historial de Cliente</a>
+                </div>
+            </div>
+                <!-- <a class="nav-link" href="register">Usuarios</a> -->
+                <a class="btn btn-outline-primary margen" href="register">Usuarios</a>
+                <a class="btn outline" href="clinicio">Cerras Sesion</a>
+                
+                
+                
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> -->
+
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+        </div>
+    </nav>
+
+    <div class = "login-formb">
+        <div class = "login-form">
+            <h2>Agenda</h2>
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Reservación de.." aria-label="Search">
+                <a class="btn btn-primary">Buscar</a>
+            </form>
+            <div class = "fon-busc-res"></div> -->
+            <div class="form-group pull-right">
+                <input type="text" class="search form-control" placeholder="Reservacion a nombre de..">
+        </div>
+            <span class="counter pull-right"></span>
+            <table class="table table-hover table-bordered results">
+              <thead>
+                <tr>
+                  <th class="perro" class="col-md-5 col-xs-5">Name</th>
+                <tr class="warning no-result">
+                  <td colspan="4"><i class="fa fa-warning"></i> No result</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="perro">
+                  <td>Marco Raúl</td>
+                </tr>
+                <tr class="perro">
+                  <td>Gabriel Salvador</td>
+                </tr>
+                <tr class="perro">
+                  <td>Karen</td>
+                </tr>
+                <tr class="perro">
+                  <td>Andrea</td>
+                </tr>
+              </tbody>
+            </table>
+            <a class="btn btn-primary"href="#">Asignar Cuarto</a>
+        </div>
+    </div>
+    <!-- <div class="inicio-forma">
+        <img src="resources/css/Imagenes/Logocentral.png" alt="Logo">
+        <a href="agenda" class="btn-agenda">Agenda</a>
+        <a href="registrar" class="btn-registrar">Registrar</a>
+        <form action="register" method="get">
+            <a href="register" class="btn-usuarios">Usuarios</a>
+        </form> -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
