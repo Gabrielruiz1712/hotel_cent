@@ -255,10 +255,13 @@ app.get('/clinicio', (req, res)=>{
 app.get('/clconfir', (req, res)=>{
     res.render('clconfir.ejs');
 })
+ app.set('port', process.env.PORT || 3000)
 
-
-app.listen(3000, (req, res)=>{
-    console.log('SERVER RUNNING IN http://localhost:3000');
+// app.listen(3000, (req, res)=>{
+//     console.log('SERVER RUNNING IN http://localhost:3000');
+// })
+app.listen(app.get('port'), () => {
+	console.log('servidor arriba en el puerto ', app.get('port'));
 })
 
 
