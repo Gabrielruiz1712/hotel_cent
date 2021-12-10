@@ -415,6 +415,32 @@ border-color:#6B7280;
   border-color:#962121;
   }
 
+  .btn-eliminar-table{
+    width: 50%;
+    padding: 15px;
+    background-color: #9c251c;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:medium;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 4px;
+    border-radius: 5px;
+    /* Para dar la apariencia de un boton */
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;  
+    }
+    
+    .btn-eliminar-table:hover,.btn-eliminar-table:active{
+    color:#fff;
+    background-color: #6b3535;
+    border-color:#962121;
+    }
+
 ancel:focus{
 box-shadow:0 0 0 3px #6B7280;
   box-shadow:0 0 0 3px #6B7280;

@@ -122,30 +122,53 @@ app.get('/', (req, res) => {
 
 	})
 	
+	var mysql      = require('mysql');  
+	var connections = mysql.createConnection({  
+ 		 host     : 'bqvxdlbbxq2rfc3jiubf-mysql.services.clever-cloud.com',  
+ 		 user     : 'ukrztubgl7lpwen3',  
+ 		 password : '0S56oRhGGdMxNQXN5Ytr',  
+ 		 database : 'bqvxdlbbxq2rfc3jiubf'  
+	});
 	
-// metodo eliminar usuario
-// app.post('/eliminar', async (req, res) => {
-// 	const idusario = req.body.Con;
-// 	//console.log(Tipo)
-// 	connection.query('DELETE FROM usuario WHERE usuario.idUsuario = ?', [idusuario], async (error, results, fields) => {
-// 		if (error) {
-// 			console.log(error);
-// 			res.end();
-// 		} else { 
-// 			res.render('inicio', {
-// 				alert: true,
-// 				alertTitle: "Registration",
-// 				alertMessage: "¡Successful Elemination!",
-// 				alertIcon: 'success',
-// 				showConfirmButton: false,
-// 				timer: 1500,
-// 				ruta: 'inicio'
-// 			});
-// 			res.redirect('/');
-// 		}
-// 	});
+app.get('/', function (req, res) {
+	connections.connect();  
+   
+	connections.query('SELECT * FROM Usuario', function(err, rows, fields)   
+	{  
+		connections.end();
+   
+		if (err) throw err;  
+   
+		res.json(rows); 
+		console.log(rows)
+	});
+	res.render('eliminar')
+  });
+//metodo eliminar usuario
+app.post('/eliminaru', async (req, res) => {
+	const idusario = req.body.Con;
+	//console.log(Tipo)
+	connection.query('DELETE FROM usuario WHERE usuario.idUsuario = ?', [idusuario], async (error, results, fields) => {
+		if (error) {
+			console.log(error);
+			res.end();
+		} else { 
+			res.render('inicio', {
+				alert: true,
+				alertTitle: "Registration",
+				alertMessage: "¡Successful Elemination!",
+				alertIcon: 'success',
+				showConfirmButton: false,
+				timer: 1500,
+				ruta: 'inicio'
+			});
+			res.redirect('/');
+		}
+	});
 
-// })
+})
+
+
 
 	//11 - Metodo para la autenticacion
 	app.post('/auth', async (req, res) => {
