@@ -445,6 +445,14 @@ ancel:focus{
 box-shadow:0 0 0 3px #6B7280;
   box-shadow:0 0 0 3px #6B7280;
 }
+.e-ddl-popup {
+  margin: 0 auto;
+}
+
+.ctrllabel {
+  font-weight: 600;
+  padding-bottom: 12px;
+}
     
 label {
   display: block;

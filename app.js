@@ -94,6 +94,18 @@ app.get('/', (req, res) => {
 		res.render('register.ejs');
 	})
 
+// 	const router = require('express').Router();
+
+// const customerController = require('../controllers/customerController');
+
+// router.get('/', customerController.list);
+// router.post('/add', customerController.save);
+// router.get('/update/:id', customerController.edit);
+// router.post('/update/:id', customerController.update);
+// router.get('/delete/:id', customerController.delete);
+
+// module.exports = router;
+
 	app.post('/register', async (req, res) => {
 		const Nombre = req.body.Nombre;
 		const name = req.body.name;
@@ -133,19 +145,19 @@ app.get('/', (req, res) => {
 app.get('/', function (req, res) {
 	connections.connect();  
    
-	connections.query('SELECT * FROM Usuario', function(err, rows, fields)   
+	connections.query('SELECT * FROM Usuario ', function(err, rows, fields)   
 	{  
-		connections.end();
    
 		if (err) throw err;  
    
 		res.json(rows); 
 		console.log(rows)
+		 data: rows;
 	});
 	res.render('eliminar')
   });
 //metodo eliminar usuario
-app.post('/eliminaru', async (req, res) => {
+app.post('/delete', async (req, res) => {
 	const idusario = req.body.Con;
 	//console.log(Tipo)
 	connection.query('DELETE FROM usuario WHERE usuario.idUsuario = ?', [idusuario], async (error, results, fields) => {
@@ -255,14 +267,14 @@ app.get('/clinicio', (req, res)=>{
 app.get('/clconfir', (req, res)=>{
     res.render('clconfir.ejs');
 })
- app.set('port', process.env.PORT || 3000)
+//  app.set('port', process.env.PORT || 3000)
 
-// app.listen(3000, (req, res)=>{
-//     console.log('SERVER RUNNING IN http://localhost:3000');
-// })
-app.listen(app.get('port'), () => {
-	console.log('servidor arriba en el puerto ', app.get('port'));
+app.listen(3000, (req, res)=>{
+    console.log('SERVER RUNNING IN 185.42.117.108');
 })
+// app.listen(app.get('port'), () => {
+// 	console.log('servidor arriba en el puerto ', app.get('port'));
+// })
 
 
 
