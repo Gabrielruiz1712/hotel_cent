@@ -270,7 +270,7 @@ app.get('/clconfir', (req, res)=>{
 //  app.set('port', process.env.PORT || 3000)
 
 app.listen(3000, (req, res)=>{
-    console.log('SERVER RUNNING IN 185.42.117.109');
+    console.log('SERVER RUNNING IN domain.par.clever-cloud.com.');
 })
 // app.listen(app.get('port'), () => {
 // 	console.log('servidor arriba en el puerto ', app.get('port'));
